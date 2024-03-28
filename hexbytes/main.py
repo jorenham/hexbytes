@@ -51,10 +51,10 @@ class HexBytes(bytes):
             return result
 
     def __repr__(self) -> str:
-        return f"HexBytes({'0x' + self.hex()!r})"
+        return f"HexBytes({self.to_0x_hex()!r})"
 
     def to_0x_hex(self) -> str:
         """
         Convert the bytes to a 0x-prefixed hex string
         """
-        return "0x" + self.hex()
+        return f"0x{self.hex()}"
